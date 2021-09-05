@@ -1,0 +1,94 @@
+1. Create an array with five scores out of 100, compute the average of the scores and compute percentage.
+
+package com.yash.demo;
+import java.util.Scanner;
+
+public class Array {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int num = 0;
+		int total=0;
+		float average =0;
+		
+		//i will take input value from user 
+		System.out.println("Enter array element");
+		num = sc.nextInt();
+		
+		int[] arr = new int[num];
+		System.out.println("Enter number");
+		for(int i=0; i<num; i++) {
+			
+			arr[i] = sc.nextInt();
+			total = total+arr[i];
+			average = total/num;
+		}
+		System.out.println("Total Sum is"+total);
+		System.out.println("Average"+average);
+	
+		
+	}
+}
+
+2.Create two 3 X 3 matrices and perform multiplication of matrices.
+package com.yash.demo;
+
+public class MultipleMatrix{  
+public static void main(String args[]){  
+  
+int a[][]={{3,3,3},{4,4,4},{5,5,5}};    
+int b[][]={{4,4,4},{5,5,5},{6,6,6}};    
+    
+  
+int c[][]=new int[3][3];  //3 rows and 3 columns  
+    
+  
+for(int i=0;i<3;i++){    
+for(int j=0;j<3;j++){    
+c[i][j]=0;      
+for(int k=0;k<3;k++)      
+{      
+c[i][j]+=a[i][k]*b[k][j];      
+}//end of k loop  
+System.out.print(c[i][j]+" ");  //printing matrix element  
+}//end of j loop  
+System.out.println();//new line    
+}    
+}}  
+
+
+
+
+3. Create an array of type int with 10 elements.
+ 
+  int array[]={8,2,3,1,6,5,7};
+
+Sort the array in descending order.
+
+
+
+package com.yash.demo;
+
+public class Decending {
+public static void main(String args[]) {
+	int temp;
+	int[] arr = new int[] {55,33,44,77,22,33,44,55,11,99};
+	for(int i=0;i<arr.length;i++) {
+		for(int j=i;j<arr.length;j++) {
+			if(arr[i]<arr[j]) {
+				//swapping using temp variable
+				temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+			}
+		}
+	}
+	for(int a:arr) {
+		System.out.println("decending "+ a);
+	}
+}
+}
+
+
+
+
